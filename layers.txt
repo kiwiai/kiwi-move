@@ -1,0 +1,18 @@
+Revision October 31st, 2013
+
+.cmp = Component side (top copper)
+.G2P = Inner layer - Layer2 (middle copper, GND)
+.G15P = Inner layer - Layer15 (middle copper, 3V3)
+.sol = Solder side (bottom copper)
+.GTO = Top Silkscreen
+.GBO = Bottom Silkscreen
+.GTP = Top Soldermask
+.drd = Drills
+.dri = Holes
+.drl = Drill Rack File
+.mil = Milling layer
+.GBP = Bottom Soldermask
+.crc = Cream frame CMP (top cream)
+.crs = Cream frame SOL (bottom cream)
+
+
