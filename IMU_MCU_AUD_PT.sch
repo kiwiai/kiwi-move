@@ -11569,6 +11569,8 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="B1" library="Spark" deviceset="NL17SZ125" device="SOT553"/>
 <part name="GND40" library="supply1" deviceset="GND" device=""/>
 <part name="P+2" library="SparkFun" deviceset="3.3V" device="" value="+3V3"/>
+<part name="FRAME5" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
+<part name="FRAME6" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11622,6 +11624,10 @@ We've spent an enormous amount of time creating and checking these footprints an
 <text x="396.24" y="123.19" size="1.778" layer="91">VDDA</text>
 <text x="474.98" y="173.99" size="1.778" layer="91">VDDA</text>
 <text x="5.08" y="7.62" size="1.778" layer="91">Kiwi IMU</text>
+<text x="439.42" y="10.16" size="1.778" layer="91">Kiwi Wearable Technologies Ltd.</text>
+<text x="187.96" y="10.16" size="1.778" layer="91">Kiwi Wearable Technologies Ltd.</text>
+<text x="243.84" y="7.62" size="1.778" layer="91">2</text>
+<text x="497.84" y="7.62" size="1.778" layer="91">2</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -12942,6 +12948,8 @@ We've spent an enormous amount of time creating and checking these footprints an
 <text x="167.64" y="91.44" size="1.778" layer="97">default to GND</text>
 <text x="2.286" y="24.638" size="1.778" layer="97">*2.375V &lt; VCC &lt; 3.465V</text>
 <text x="5.08" y="5.08" size="1.778" layer="91">altered resistors to 4.7k, and added 10k pullup</text>
+<text x="167.64" y="10.16" size="1.778" layer="91">Kiwi Wearable Technologies Ltd.</text>
+<text x="243.84" y="7.62" size="1.778" layer="91">2</text>
 </plain>
 <instances>
 <instance part="FRAME3" gate="G$1" x="0" y="0"/>
@@ -13173,11 +13181,17 @@ We've spent an enormous amount of time creating and checking these footprints an
 </sheet>
 <sheet>
 <plain>
+<text x="167.64" y="10.16" size="1.778" layer="91">Kiwi Wearable Technologies Ltd.</text>
+<text x="243.84" y="7.62" size="1.778" layer="91">2</text>
+<text x="127" y="119.38" size="1.778" layer="91">MP45DT02</text>
+<text x="2.54" y="2.54" size="1.778" layer="91">adding microphone, single L/R channel to PWM filter through analog</text>
 </plain>
 <instances>
-<instance part="+3V15" gate="G$1" x="48.26" y="48.26"/>
-<instance part="GND34" gate="1" x="73.66" y="43.18"/>
-<instance part="M1" gate="G$1" x="60.96" y="35.56"/>
+<instance part="+3V15" gate="G$1" x="111.76" y="114.3"/>
+<instance part="GND34" gate="1" x="149.86" y="109.22"/>
+<instance part="M1" gate="G$1" x="132.08" y="101.6"/>
+<instance part="FRAME5" gate="G$1" x="0" y="0"/>
+<instance part="FRAME5" gate="G$2" x="147.32" y="0"/>
 </instances>
 <busses>
 </busses>
@@ -13185,42 +13199,50 @@ We've spent an enormous amount of time creating and checking these footprints an
 <net name="A1" class="0">
 <segment>
 <pinref part="M1" gate="G$1" pin="DOUT"/>
-<wire x1="45.72" y1="35.56" x2="48.26" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="101.6" x2="119.38" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="+3V15" gate="G$1" pin="+3V3"/>
 <pinref part="M1" gate="G$1" pin="VDD"/>
+<wire x1="119.38" y1="111.76" x2="111.76" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="1">
 <segment>
 <pinref part="GND34" gate="1" pin="GND"/>
 <pinref part="M1" gate="G$1" pin="GND1"/>
+<wire x1="144.78" y1="111.76" x2="149.86" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="A0" class="0">
 <segment>
 <pinref part="M1" gate="G$1" pin="CLK"/>
-<wire x1="48.26" y1="25.4" x2="45.72" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="91.44" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
 </sheet>
 <sheet>
 <plain>
+<text x="167.64" y="10.16" size="1.778" layer="91">Kiwi Wearable Technologies Ltd.</text>
+<text x="243.84" y="7.62" size="1.778" layer="91">2</text>
+<text x="119.38" y="147.32" size="1.778" layer="91">LPS331AP</text>
+<text x="2.54" y="2.54" size="1.778" layer="91">adding temperature and barometer through I2C connection</text>
 </plain>
 <instances>
-<instance part="P1" gate="G$1" x="68.58" y="53.34"/>
-<instance part="GND35" gate="1" x="68.58" y="17.78"/>
-<instance part="GND36" gate="1" x="33.02" y="48.26"/>
-<instance part="GND37" gate="1" x="101.6" y="63.5"/>
-<instance part="GND38" gate="1" x="101.6" y="68.58"/>
-<instance part="GND39" gate="1" x="63.5" y="101.6" rot="R180"/>
-<instance part="+3V16" gate="G$1" x="73.66" y="99.06"/>
-<instance part="+3V17" gate="G$1" x="68.58" y="99.06"/>
-<instance part="+3V18" gate="G$1" x="33.02" y="73.66"/>
+<instance part="P1" gate="G$1" x="127" y="99.06"/>
+<instance part="GND35" gate="1" x="127" y="73.66"/>
+<instance part="GND36" gate="1" x="96.52" y="93.98"/>
+<instance part="GND37" gate="1" x="162.56" y="109.22"/>
+<instance part="GND38" gate="1" x="162.56" y="114.3"/>
+<instance part="GND39" gate="1" x="121.92" y="137.16" rot="R180"/>
+<instance part="+3V16" gate="G$1" x="132.08" y="134.62"/>
+<instance part="+3V17" gate="G$1" x="127" y="134.62"/>
+<instance part="+3V18" gate="G$1" x="96.52" y="119.38"/>
+<instance part="FRAME6" gate="G$1" x="0" y="0"/>
+<instance part="FRAME6" gate="G$2" x="147.32" y="0"/>
 </instances>
 <busses>
 </busses>
@@ -13228,69 +13250,69 @@ We've spent an enormous amount of time creating and checking these footprints an
 <net name="GND" class="1">
 <segment>
 <pinref part="P1" gate="G$1" pin="SDO/SA0"/>
-<wire x1="68.58" y1="38.1" x2="68.58" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="127" y1="83.82" x2="127" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="GND35" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="P1" gate="G$1" pin="GND"/>
 <pinref part="GND36" gate="1" pin="GND"/>
-<wire x1="33.02" y1="50.8" x2="45.72" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="96.52" x2="104.14" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P1" gate="G$1" pin="GND1"/>
 <pinref part="GND37" gate="1" pin="GND"/>
-<wire x1="101.6" y1="66.04" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="111.76" x2="149.86" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P1" gate="G$1" pin="GND2"/>
 <pinref part="GND38" gate="1" pin="GND"/>
-<wire x1="101.6" y1="71.12" x2="91.44" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="116.84" x2="149.86" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P1" gate="G$1" pin="GND3"/>
 <pinref part="GND39" gate="1" pin="GND"/>
-<wire x1="63.5" y1="99.06" x2="63.5" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="134.62" x2="121.92" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="P1" gate="G$1" pin="VDD"/>
 <pinref part="+3V16" gate="G$1" pin="+3V3"/>
-<wire x1="73.66" y1="96.52" x2="73.66" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="132.08" x2="132.08" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P1" gate="G$1" pin="VCCA"/>
 <pinref part="+3V17" gate="G$1" pin="+3V3"/>
-<wire x1="68.58" y1="96.52" x2="68.58" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="127" y1="132.08" x2="127" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P1" gate="G$1" pin="VDD_IO"/>
 <pinref part="+3V18" gate="G$1" pin="+3V3"/>
-<wire x1="33.02" y1="71.12" x2="45.72" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="116.84" x2="104.14" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D6" class="0">
 <segment>
 <pinref part="P1" gate="G$1" pin="SDA/SDI/SDO"/>
-<wire x1="63.5" y1="38.1" x2="63.5" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="83.82" x2="121.92" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D5" class="0">
 <segment>
 <pinref part="P1" gate="G$1" pin="SCL/SPC"/>
-<wire x1="45.72" y1="55.88" x2="33.02" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="101.6" x2="96.52" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D3" class="0">
 <segment>
 <pinref part="P1" gate="G$1" pin="INT1"/>
-<wire x1="91.44" y1="60.96" x2="101.6" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="106.68" x2="157.48" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D4" class="0">
 <segment>
 <pinref part="P1" gate="G$1" pin="INT2"/>
-<wire x1="91.44" y1="50.8" x2="101.6" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="96.52" x2="157.48" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
